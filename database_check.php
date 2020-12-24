@@ -8,13 +8,13 @@ try {
     echo "Bağlantı başarıyla sağlandı.";
 } 
 catch (PDOException $e){
-    if (strpos($e->getMessage(), "1049") == true){
+    if (strpos($e->getMessage(), "[1049]") == true){
         echo "Bağlantıda hatalı veritabanı adı girildi.";
     }
-    elseif(strpos($e->getMessage(), "1045") == true){
+    elseif(strpos($e->getMessage(), "[1045]") == true){
         echo "Bağlantıda hatalı kullanıcı adı veya şifre girildi.";
     }
-    elseif(strpos($e->getMessage(), "2002") == true){
+    elseif(strpos($e->getMessage(), "[2002]") == true){
         echo "Bağlantıda hatalı sunucu adresi girildi.";
     }
 }
